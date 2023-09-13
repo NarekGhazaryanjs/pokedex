@@ -1,0 +1,41 @@
+.content {
+  margin-top: 20px;
+
+  @include breakpoint(tablet) {
+    margin-top: 40px;
+  }
+
+  &__heading {
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 200px) 48px)
+      minmax(0, 200px);
+    gap: 20px;
+    margin-top: 16px;
+
+    @include breakpoint(tablet-large) {
+      gap: 16px;
+    }
+
+    @include breakpoint(tablet) {
+      @include flex-space-between(column);
+      gap: 32px;
+    }
+
+    &__arrow {
+      fill: $primary-color;
+      margin: auto;
+      transform: scale(1.5);
+
+      @include breakpoint(tablet) {
+        transform: scale(1.5) rotate(90deg);
+      }
+    }
+  }
+}

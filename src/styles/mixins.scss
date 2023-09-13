@@ -1,0 +1,37 @@
+@mixin container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 32px 140px;
+
+  @include breakpoint(tablet-small) {
+    padding: 60px 20px 100px;
+  }
+
+  @include breakpoint(phone) {
+    padding: 50px 16px 90px;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space-between($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: $direction;
+}
+
+@mixin pagination-button($width: 40px) {
+  width: $width;
+  background-color: white;
+  color: $primary-color;
+  user-select: none;
+  height: 40px;
+  padding: 10px;
+  font-weight: 500;
+}

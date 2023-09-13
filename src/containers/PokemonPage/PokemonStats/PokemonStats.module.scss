@@ -1,0 +1,52 @@
+.content {
+  margin-top: 32px;
+
+  @include breakpoint(laptop) {
+    padding: 0;
+    gap: 16px 28px;
+    margin-top: 24px;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 0 28px;
+  }
+
+  @include breakpoint(tablet-small) {
+    padding: 0;
+  }
+
+  &__heading {
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px 36px;
+    padding: 18px 20px;
+    margin-top: 12px;
+
+    @include breakpoint(laptop) {
+      padding: 0;
+      gap: 16px 24px;
+    }
+
+    @include breakpoint(tablet-large) {
+      gap: 14px;
+    }
+
+    @include breakpoint(tablet) {
+      gap: 20px;
+    }
+
+    @include breakpoint(tablet-small) {
+      gap: 10px;
+    }
+
+    @include breakpoint(phone-small) {
+      gap: 6px;
+    }
+  }
+}

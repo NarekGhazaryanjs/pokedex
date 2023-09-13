@@ -1,0 +1,40 @@
+.dropdown {
+  min-width: 56px;
+  color: $primary-color;
+  user-select: none;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    font-size: 0.875rem !important;
+  }
+
+  &__head {
+    @include flex-space-between;
+    padding: 8px 6px 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+
+    &_active {
+      box-shadow: $box-shadow;
+    }
+
+    &__icon {
+      fill: $primary-color;
+      transform: scale(0.55) rotate(90deg);
+      transition: 0.2s;
+
+      &_active {
+        transform: scale(0.55) rotate(270deg);
+      }
+    }
+  }
+
+  &__options {
+    box-shadow: $box-shadow;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    background: white;
+  }
+}

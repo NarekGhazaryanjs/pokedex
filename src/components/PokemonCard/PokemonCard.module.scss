@@ -1,0 +1,56 @@
+.content {
+  box-shadow: $box-shadow;
+  min-height: 271px;
+  padding: 12px;
+
+  &:hover {
+    animation-name: bounce;
+    animation-duration: 0.3s;
+  }
+
+  &_centered {
+    @include flex-center;
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $light-gray;
+    border-radius: $border-radius;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px;
+
+    &__image {
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  &__id {
+    color: $gray;
+    text-align: center;
+  }
+
+  &__types {
+    color: $primary-color;
+    margin-top: 2px;
+    text-align: center;
+  }
+
+  &__error {
+    color: $primary-color;
+    font-weight: 500;
+    text-align: center;
+  }
+}

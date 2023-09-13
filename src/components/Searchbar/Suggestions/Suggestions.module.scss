@@ -1,0 +1,8 @@
+.suggestions {
+  position: absolute;
+  background: white;
+  margin-top: 40px;
+  width: calc(100% - 41px);
+  z-index: 999;
+  box-shadow: $box-shadow;
+}

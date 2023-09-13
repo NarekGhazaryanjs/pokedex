@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@types": ["src/types"],
+      "@utils": ["src/utils"],
+      "@store": ["src/store"],
+      "@hooks": ["src/hooks"],
+      "@assets": ["src/assets"],
+      "@store/*": ["src/store/*"],
+      "@layouts": ["src/layouts"],
+      "@styles/*": ["src/styles/*"],
+      "@requests": ["src/requests"],
+      "@constants": ["src/constants"],
+      "@components": ["src/components"],
+      "@containers": ["src/containers"],
+      "@actions": ["src/store/actions"],
+      "@reducers": ["src/store/reducers"],
+      "@selectors": ["src/store/selectors"],
+      "@containers/*": ["src/containers/*"],
+      "@reducers/*": ["src/store/reducers/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

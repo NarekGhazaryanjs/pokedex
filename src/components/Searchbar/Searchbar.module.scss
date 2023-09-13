@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  width: 280px;
+  box-shadow: $box-shadow;
+  position: relative;
+
+  &__input {
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  &__search_button {
+    @include flex-center;
+    width: 48px;
+    background-color: $primary-color;
+
+    svg {
+      fill: white;
+      transform: scale(0.75);
+    }
+  }
+}

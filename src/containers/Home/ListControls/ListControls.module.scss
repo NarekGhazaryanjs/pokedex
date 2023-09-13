@@ -1,0 +1,75 @@
+.controls {
+  @include flex-space-between(row);
+  margin-top: 20px;
+
+  &__left {
+    @include flex-space-between(row);
+    gap: 20px;
+
+    @include breakpoint(laptop-small) {
+      display: grid;
+      grid-template-columns: 20fr auto 1fr;
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+
+    @include breakpoint(tablet-small) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    &__searchbar {
+      @include breakpoint(tablet) {
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      @include breakpoint(tablet-small) {
+        grid-column-end: 2;
+      }
+    }
+
+    &__dropdown {
+      box-shadow: $box-shadow;
+      min-width: 256px;
+      color: black;
+      text-transform: capitalize;
+
+      @include breakpoint(tablet) {
+        min-width: unset;
+      }
+
+      &_types {
+        min-width: 120px;
+
+        @include breakpoint(tablet) {
+          min-width: unset;
+        }
+
+        &__options {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 200%;
+
+          @include breakpoint(tablet) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include flex-space-between(row);
+    gap: 10px;
+    color: $primary-color;
+    font-weight: 500;
+
+    @include breakpoint(laptop-small) {
+      display: none;
+    }
+  }
+}

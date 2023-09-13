@@ -1,0 +1,46 @@
+.column {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  gap: 4px;
+  height: 180px;
+
+  @include breakpoint(laptop-small) {
+    height: 160px;
+  }
+
+  @include breakpoint(tablet-large) {
+    height: 150px;
+  }
+
+  @include breakpoint(tablet) {
+    height: 180px;
+  }
+
+  @include breakpoint(tablet-small) {
+    height: 160px;
+  }
+
+  &__block {
+    width: 100%;
+    background-color: $light-gray;
+
+    &_filled {
+      background-color: $primary-color;
+    }
+  }
+
+  &_name {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 6px;
+
+    @include breakpoint(laptop-small) {
+      font-size: 0.875rem;
+    }
+
+    @include breakpoint(tablet-small) {
+      font-size: 0.75rem;
+    }
+  }
+}

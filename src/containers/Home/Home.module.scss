@@ -1,0 +1,46 @@
+.container {
+  @include container;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 160px;
+  }
+
+  @include breakpoint(tablet-small) {
+    padding-bottom: 140px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    color: $primary-color;
+  }
+
+  &__search_filter {
+    margin-top: 20px;
+    padding-left: 4px;
+    word-break: break-word;
+
+    &__value {
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+
+  &__list_loading {
+    @include flex-center;
+    height: 240px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoint(laptop-small) {
+      justify-content: center;
+    }
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

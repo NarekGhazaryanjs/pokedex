@@ -1,0 +1,44 @@
+$phone-small: 340px;
+$phone: 380px;
+$phone-large: 440px;
+$tablet-small: 550px;
+$tablet: 768px;
+$tablet-large: 900px;
+$laptop-small: 1050px;
+$laptop: 1200px;
+
+@mixin breakpoint($point) {
+  @if $point == phone-small {
+    @media (max-width: $phone-small) {
+      @content;
+    }
+  } @else if $point == phone {
+    @media (max-width: $phone) {
+      @content;
+    }
+  } @else if $point == phone-large {
+    @media (max-width: $phone-large) {
+      @content;
+    }
+  } @else if $point == tablet-small {
+    @media (max-width: $tablet-small) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $point == tablet-large {
+    @media (max-width: $tablet-large) {
+      @content;
+    }
+  } @else if $point == laptop-small {
+    @media (max-width: $laptop-small) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (max-width: $laptop) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  font-weight: 500;
+  color: $primary-color;
+  box-shadow: $box-shadow;
+  margin-top: 40px;
+
+  &__button_prev_next {
+    @include pagination-button(60px);
+  }
+}
