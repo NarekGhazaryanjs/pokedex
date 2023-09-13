@@ -24,16 +24,13 @@ Next.js app that displays Pokémon from the original Pokémon API ([pokeapi.co](
 
 ![screenshot](./public/screenshot.png)
 
-## Demo
-
-> https://pokedex.ednoram.vercel.app/
 
 ## Usage
 
 > Clone the repository.
 
 ```bash
-git clone https://github.com/ednoram/pokedex.git
+git clone https://github.com/NarekGhazaryanjs/pokedex.git
 ```
 
 > Run the following commands.
@@ -41,13 +38,3 @@ git clone https://github.com/ednoram/pokedex.git
 ```bash
 npm install && npm run dev
 ```
-
-## Contact
-
-Edward Noramirian
-
-> GitHub: [@ednoram](https://github.com/ednoram)
-
-> LinkedIn: [Edward Noramirian](https://www.linkedin.com/in/edward-noramirian)
-
-> Email: e.noramirian@gmail.com
